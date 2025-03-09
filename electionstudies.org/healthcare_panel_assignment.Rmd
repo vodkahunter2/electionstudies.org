@@ -1,5 +1,5 @@
 ---
-title: "Analysis of Healthcare Attitudes in America: ANES 2016-2020 Panel Study"
+ttitle: "Analysis of Healthcare Attitudes in America: ANES 2016-2020 Panel Study"
 author: "Student Name"
 date: "`r Sys.Date()`"
 output: 
