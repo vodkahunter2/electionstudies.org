@@ -1,0 +1,115 @@
+---
+title: "Analysis of Healthcare Attitudes in America: ANES 2016-2020 Panel Study"
+author: "Student Name"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+# Assignment Overview
+
+## Background
+
+The American healthcare system has undergone significant policy discussions and reform attempts over the past several years. The Affordable Care Act (ACA), initially implemented in 2010, continued to be a major point of political contention during the 2016 and 2020 election cycles. Meanwhile, the COVID-19 pandemic that emerged in 2020 placed unprecedented stress on the healthcare system and potentially altered public attitudes toward healthcare policy.
+
+This assignment leverages the American National Election Studies (ANES) 2016-2020 panel data to examine how individual attitudes toward healthcare policies changed over this crucial four-year period. The panel structure of the data allows us to track the same individuals over time, enabling more rigorous analysis of causal factors in attitude change.
+
+## Objectives
+
+In this assignment, you will:
+
+1. Analyze changes in healthcare attitudes between 2016 and 2020 at the individual level
+2. Develop and test regression models with lagged variables to examine the determinants of healthcare opinion change
+3. Properly handle panel data and implement appropriate standard errors
+4. Interpret your findings in the context of political and policy developments
+
+## Data Source
+
+This assignment uses the American National Election Studies (ANES) 2016-2020 Panel Study, as detailed in "Kopi av ANES-2016-2020.pdf". The ANES has conducted nationally representative surveys of the American electorate since 1948, with the panel study specifically following the same respondents across the 2016 and 2020 presidential elections.
+
+# Assignment Tasks
+
+## Task 1: Data Preparation and Exploration (20 points)
+
+1. Load and prepare the ANES 2016-2020 panel data for analysis
+2. Identify and select relevant healthcare variables from both 2016 and 2020
+3. Create properly coded panel variables that track the same concepts across both years
+4. Generate descriptive statistics for key healthcare variables
+5. Create visualizations showing the distribution of healthcare attitudes in 2016 and 2020
+
+## Task 2: Panel Analysis with Lagged Variables (30 points)
+
+1. Construct a panel data framework for the ANES data
+2. Develop regression models using lagged variables to examine how previous healthcare attitudes (2016) influence current attitudes (2020)
+3. Include appropriate control variables (demographic factors, political variables)
+4. Implement the correct model specification for panel data analysis
+5. Interpret the coefficient on the lagged dependent variable and explain its substantive meaning
+
+## Task 3: Standard Error Estimation (20 points)
+
+1. Explain why standard errors might be problematic in panel data analysis
+2. Implement robust standard errors in your regression models
+3. Compare results with and without robust standard error estimation
+4. Discuss how the choice of standard error estimation affects your substantive conclusions
+
+## Task 4: Subgroup Analysis (15 points)
+
+1. Examine whether healthcare attitude changes differ systematically across:
+   - Partisan identification
+   - Demographic categories (age, race, gender)
+   - Socioeconomic factors (education, income)
+2. Test for significant interactions between these factors and time
+3. Visualize these differential changes with appropriate plots
+
+## Task 5: Interpretation and Discussion (15 points)
+
+1. Summarize your key findings about changes in healthcare attitudes from 2016 to 2020
+2. Discuss potential explanations for observed changes, considering political events and the COVID-19 pandemic
+3. Evaluate the strengths and limitations of your analytical approach
+4. Suggest potential policy implications of your findings
+
+# Deliverables
+
+Your submission should include:
+
+1. An R script implementing all analyses (with clear comments)
+2. A report (PDF format, 8-10 pages) presenting your findings with appropriate tables and figures
+3. Answers to all questions in the assignment tasks
+
+# Grading Criteria
+
+- Correctness of data preparation and analytical approach (30%)
+- Proper implementation of regression models with lagged variables (25%)
+- Appropriate handling of standard errors (15%)
+- Quality of data visualization and presentation (15%)
+- Depth of interpretation and discussion (15%)
+
+# R Code Template
+
+A template R script (`healthcare_panel_analysis.R`) has been provided to help you get started. You will need to modify this code to complete the assignment tasks. 
+
+The code includes:
+- Data preparation steps
+- Example models with lagged variables
+- Implementation of robust standard errors
+- Visualization templates
+
+# Tips for Success
+
+- Pay careful attention to the panel structure of the data
+- Be mindful of missing data and attrition between waves
+- Consider how the COVID-19 pandemic might have influenced healthcare attitudes in 2020
+- Remember that the coefficient on a lagged dependent variable represents persistence in attitudes
+- Focus on substantive interpretation, not just statistical significance
+
+# References
+
+- American National Election Studies. (2021). ANES 2016-2020 Panel Study [dataset]. Stanford University and the University of Michigan [producers].
+- Wooldridge, J. M. (2010). Econometric analysis of cross section and panel data. MIT press.
+- Angrist, J. D., & Pischke, J. S. (2008). Mostly harmless econometrics. Princeton university press.
